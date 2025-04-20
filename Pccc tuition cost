@@ -1,0 +1,53 @@
+"""
+Name:Julio Maldonado
+Class:CIS 108-Programming fundamentals
+Date: 3/17/25
+Program name: Pccc tuition fee
+Program description: This program ask the user their name, student id
+and number of credit taken in the semester. Then it will calculate the total
+charges for the semester.
+"""
+#constants
+cpc = 177.00
+gccpc = 23.50
+safpc = 2.90
+afpc = 6.60
+tfpc = 22.00
+rfps = 50.00
+#MainProgramm
+import random
+def main():
+    print("                   PASSAIC COUNTY COMMUNITY COLLEGE                    ")
+    print("="*75)
+    name = input("Enter student name here:")
+    idn = int(input("Provide student id number:"))
+    credit = float(input("Provide the number of credits taken this semester:"))
+    invoice = random.randint(1000,10000)
+#Calcs
+    college_charges = cpc * credit
+    general_college_fees = gccpc * credit
+    student_a_f = safpc * credit
+    athletic_f = afpc * credit
+    technology_f = tfpc * credit
+    total_cost = college_charges + general_college_fees + student_a_f + athletic_f + technology_f + rfps
+
+#display
+    print("-"*75)
+    print("                   PASSAIC COUNTY COMMUNITY COLLEGE                    ")
+    print(f"Name: {name}\t\t\tID#: {idn}\t\tInvoice #: {invoice}")
+    print(f"Number of Credits: {credit}\tCost Per Credit: ${cpc}")
+    print("Credit Charges this Semester:   $", college_charges)
+    print("General College Fees:           $", general_college_fees)
+    print("Student Activities Fees:        $", student_a_f)
+    print("Athletic Fees:                  $", round(athletic_f,2))
+    print("Technology Fees:                $", technology_f)
+    print("\n\n")
+    print("Total Cost this semester:       $", total_cost)
+    print("-"*75)
+    print(" Enjoy this new semester", name)
+    print("/"*75)
+    
+
+main()
+main()
+main()
